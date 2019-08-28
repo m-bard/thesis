@@ -4,7 +4,7 @@ connection: "lookerdata_publicdata_standard_sql"
 include: "/views/**/*.view"
 
 datagroup: austin_animal_center_shelter_intakes_and_outcomes_default_datagroup {
-  max_cache_age: "1 hour"
+  max_cache_age: "24 hours"
 }
 
 persist_with: austin_animal_center_shelter_intakes_and_outcomes_default_datagroup
