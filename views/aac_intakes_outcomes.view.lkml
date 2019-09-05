@@ -230,6 +230,9 @@ view: aac_intakes_outcomes {
 
   measure: count {
     type: count
-    drill_fields: []
+  }
+
+  measure: average {
+    type: average
   }
 }
