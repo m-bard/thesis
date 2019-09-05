@@ -14,7 +14,7 @@ view: aac_intakes_outcomes {
   dimension: age_upon_intake__years_ {
     type: number
     sql: CASE
-          WHEN ${TABLE}.age_upon_intake__years_ > 1 THEN 0
+          WHEN ${TABLE}.age_upon_intake__years_ < 1 THEN 0
           WHEN 1 <= ${TABLE}.age_upon_intake__years_ < 2 THEN 1
           ELSE ${TABLE}.age_upon_intake__years_
         END ;;
