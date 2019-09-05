@@ -18,6 +18,7 @@ view: aac_intakes_outcomes {
           WHEN ${TABLE}.age_upon_intake__years_ >= 1 AND ${TABLE}.age_upon_intake__years_ < 2 THEN 1
           ELSE ${TABLE}.age_upon_intake__years_
         END ;;
+        value_format_name: decimal_0
   }
 
   dimension: age_upon_intake_age_group {
@@ -230,6 +231,7 @@ view: aac_intakes_outcomes {
   dimension: time_in_shelter_days {
     type: number
     sql: ${TABLE}.time_in_shelter_days ;;
+    value_format_name: decimal_0
   }
 
   measure: count {
