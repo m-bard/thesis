@@ -242,5 +242,6 @@ view: aac_intakes_outcomes {
     type: average
     sql: ${time_in_shelter_days} ;;
     value_format_name: decimal_0
+    drill_fields: [animal_id_intake, time_in_shelter_days, outcome_type, outcome_subtype]
   }
 }
