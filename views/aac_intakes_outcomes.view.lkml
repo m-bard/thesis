@@ -232,7 +232,8 @@ view: aac_intakes_outcomes {
     type: count
   }
 
-  measure: average {
+  measure: average_time_in_shelter_days {
     type: average
+    sql: ${time_in_shelter_days} ;;
   }
 }
