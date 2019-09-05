@@ -15,7 +15,7 @@ view: aac_intakes_outcomes {
     type: number
     sql: CASE
           WHEN ${TABLE}.age_upon_intake__years_ < 1 THEN 0
-          WHEN 1 <= ${TABLE}.age_upon_intake__years_ < 2 THEN 1
+          WHEN ${TABLE}.age_upon_intake__years_ >= 1 AND ${TABLE}.age_upon_intake__years_ < 2 THEN 1
           ELSE ${TABLE}.age_upon_intake__years_
         END ;;
   }
