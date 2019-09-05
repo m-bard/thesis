@@ -13,8 +13,11 @@ view: aac_intakes_outcomes {
 
   dimension: age_upon_intake__years_ {
     type: number
-    sql: ${TABLE}.age_upon_intake__years_ ;;
-    value_format_name: decimal_0
+    sql: CASE
+          WHEN ${TABLE}.age_upon_intake__years_ > 1 THEN 0
+          WHEN 1 <= ${TABLE}.age_upon_intake__years_ < 2 THEN 1
+          ELSE ${TABLE}.age_upon_intake__years_
+        END ;;
   }
 
   dimension: age_upon_intake_age_group {
@@ -236,5 +239,6 @@ view: aac_intakes_outcomes {
   measure: average_time_in_shelter_days {
     type: average
     sql: ${time_in_shelter_days} ;;
+    value_format_name: decimal_0
   }
 }
