@@ -14,6 +14,7 @@ view: aac_intakes_outcomes {
   dimension: age_upon_intake__years_ {
     type: number
     sql: ${TABLE}.age_upon_intake__years_ ;;
+    value_format_name: decimal_0
   }
 
   dimension: age_upon_intake_age_group {
