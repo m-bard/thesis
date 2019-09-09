@@ -238,6 +238,14 @@ view: aac_intakes_outcomes {
     type: count
   }
 
+  measure: count_owner_surrender {
+    type: count
+    filters: {
+      field: intake_type
+      value: "Owner Surrender"
+    }
+  }
+
   measure: average_time_in_shelter_days {
     type: average
     sql: ${time_in_shelter_days} ;;
