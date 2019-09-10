@@ -246,6 +246,14 @@ view: aac_intakes_outcomes {
     }
   }
 
+  measure: count_euthanasia {
+    type: count
+    filters: {
+      field: outcome_type
+      value: "Euthanasia"
+    }
+  }
+
   measure: average_time_in_shelter_days {
     type: average
     sql: ${time_in_shelter_days} ;;
